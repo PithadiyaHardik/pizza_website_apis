@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/store_pizza.css">
+
+    <title>Store new pizza type</title>
+  </head>
+  <body>
+    <div
+      class="shadow container"
+      style="
+        position: relative;
+        top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:white;
+        width:50vw
+    
+      "
+    >
+      <form action="store_pizza" method="post">
+          {%  csrf_token %}
+        <div
+          class="row"
+          style="background-color: green; color: white; margin: 20px;"
+        >
+          <center>
+            <h3>ADD A NEW TYPE OF PIZZZA.</h3>
+          </center>
+        </div>
+        <div class="row" style="margin: 20px;">
+          <div class="form-group col">
+            <label>Pizza Type:</label>
+            <select name="type">
+              <option>Regular</option>
+              <option selected>Square</option>
+            </select>
+          </div>
+          <div class="form-group col">
+            <label>Pizza Size:</label>
+            <select name="size">
+              <option>Small</option>
+              <option selected>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+          </div>
+          <div clas="form-group row" style="margin: 20px;">
+              <center>
+            <label>Pizza Topping:</label>
+              <select name="topping">
+                <option>Pepperoni</option>
+                <option selected>Mushrooms</option>
+                <option>Onions</option>
+                <option>Sausage</option>
+                <option>Bacon</option>
+                <option>Extra cheese</option>
+                <option>Black olives</option>
+                <option>Green peppers</option>
+                <option>Pineapple</option>
+                <option>Spinach</option>
+              </select>
+            </center>
+          </div>
+          <div clas="form-group row" style="margin: 20px;">
+            <center>
+                <button class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                  </svg>&nbspADD</button>
+          </center>
+        </div>
+
+        <center><h6 style="color:green">{{message}}</h6></center>
+        </div>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
