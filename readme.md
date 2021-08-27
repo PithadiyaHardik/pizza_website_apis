@@ -1,5 +1,5 @@
 
-1)http://127.0.0.1:8000/store_pizza=>		This api end point is used to add the new pizza in database.
+1)http://127.0.0.1:8000/store_pizza=>		This api end point is used to add the new pizza in database.It is used with template.
 2)http://127.0.0.1:8000/show_all=>		This api point is used to get all the types of the pizzas from the database.
 3)http://127.0.0.1:8000/update_pizza/<int:id>=> This api endpoint is used to edit the existing pizza in database if pizza is not present it gives 							404.
 4)http://127.0.0.1:8000/delete_pizza/<int:id>=> This api endpoint is used to remove the pizza from the database.
